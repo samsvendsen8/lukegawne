@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 // Ensure the app routes don't break when the page is
 // refreshed
 app.all('/*', function(req, res) {
-    res.sendFile(__dirname + '/public/app.component.html');
+    res.sendFile(__dirname + 'index.html');
 });
 
 // Init server
