@@ -53,21 +53,31 @@
         </li>
     </ul>
 </nav>
-<nav class="menu-mobile" id="menu-mobile">
-    <span class="expand">open</span>
-    <ul class="menu__list" id="nav">
-        <div class="logo-icon"></div>
-        <li class="menu__item  enu-item--current">
-            <a class="menu__link" href="#topbar">Home</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#about">About</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#price">Prices</a>
-        </li>
-    </ul>
-</nav>
+<div class="nav-container" id="menu-mobile">
+    <nav class="menu-mobile">
+        <span class="logo">Gawne</span>
+        <span class="expand">Open</span>
+    </nav>
+    <nav class="menu-mobile-overlay">
+        <span class="expand expand--open">Close</span>
+        <span class="logo">Gawne</span>
+        <ul class="menu__list-mobile" id="nav">
+            <li class="menu__item  enu-item--current">
+                <a class="menu__link active" href="#topbar">Home</a>
+            </li>
+            <li class="menu__item  enu-item--current">
+                <a class="menu__link" href="#topbar">Music & Videos</a>
+            </li>
+        
+            <li class="menu__item">
+                <a class="menu__link" href="#price">News</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#price">Upcoming Shows</a>
+            </li>
+        </ul>
+    </nav>
+</div>
 
 <div class="hero-unit">
     <div class="album-widget">
@@ -79,7 +89,7 @@
             <span class="text-large display-block text-black caps">Fuck Donald Trump </span>
         </div>
     </div>
-    <video class="video" id="video-background" autoplay muted >
+    <video class="video container" id="video-background" autoplay muted >
         <source src="https://s3.ca-central-1.amazonaws.com/lukegawne/music.mp4" type="video/mp4">
     </video>
     <span class="btn-merch text-extra-large display-block text-black">Merch</span>
@@ -143,8 +153,8 @@
 
 <script>
 $(document).ready(function(){
-    $(".expand").click(function(){
-        $(".menu__list").toggleClass("show");
+    $('.expand').click(function(){
+        $('.nav-container').toggleClass('show');
     });
 });
 </script> 
