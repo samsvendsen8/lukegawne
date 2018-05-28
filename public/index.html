@@ -8,7 +8,7 @@
   <title>Luke Gawne</title>
   <meta name="description" content="">
   <meta name="author" content="">
-  <base href="/">
+
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -36,20 +36,22 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <nav class="menu">
-    <div class="container">
-        <ul class="menu__list" id="nav">
-            <div class="logo-icon"></div>
-            <li class="menu__item  enu-item--current">
-                <a class="menu__link" href="#topbar">Home</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#about">About</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#price">Prices</a>
-            </li>
-        </ul>
-    </div>
+    <span>Luke Gawne</span>
+    <ul class="menu__list" id="nav">
+        <li class="menu__item  enu-item--current">
+            <a class="menu__link active" href="#topbar">Home</a>
+        </li>
+        <li class="menu__item  enu-item--current">
+            <a class="menu__link" href="#topbar">Music & Videos</a>
+        </li>
+      
+        <li class="menu__item">
+            <a class="menu__link" href="#price">News</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="#price">Upcoming Shows</a>
+        </li>
+    </ul>
 </nav>
 <nav class="menu-mobile" id="menu-mobile">
     <span class="expand">open</span>
@@ -66,43 +68,77 @@
         </li>
     </ul>
 </nav>
-<div class="social-media">
-    <ul>
-        <li>
-            <a target="_blank"  href="https://www.youtube.com/channel/UCOf6u7i2shf695JZfXlW1Hg">
-                <span class="social-icon social-icon--youtube"></span>
-            </a>
-        </li>
-        <li >
-            <a target="_blank" href="https://twitter.com/lukegawne?lang=en">
-                <span class="social-icon social-icon--twitter"></span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.facebook.com/Luke-Gawne-271200276269576/">
-                <span class="social-icon social-icon--facebook"></span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.instagram.com/lukegawne/">
-                <span class="social-icon social-icon--instagram"></span>
-            </a>
-        </li>
-    </ul>
-</div>
 <div class="hero-unit">
-    <div class="album">
+    <div class="album-widget">
+        <div class="album-widget__art">
+            <div class="play-button"></div>
+        </div>
+        <div class="album-widget__content">
+            <span class="text-label display-block text-black caps">New Single</span>
+            <span class="text-large display-block text-black caps">Fuck Donald Trump </span>
+        </div>
+    </div>
+    <video class="video" autoplay loop id="video-background" plays-inline muted>
+        <source src="img/music.mp4" type="video/mp4">
+    </video>
+    <span class="btn-merch text-extra-large display-block text-black">Merch</span>
+    <!-- <div class="album">
         <div class="album__image"></div>
         <div class="album__content">
             <span class="album__content__text">New single "Jungle" out now</span>
             <a href="https://www.youtube.com/watch?v=I8JX9K0lVHM" target="_blank" class="album__content__btn">Listen Now</a>
         </div>
+    </div> -->
+</div>
+<div class="merch">
+    <span class="text-extra-large display-block text-black">Merch</span>
+    <div class="line"></div>
+</div>
+<div class="card-wrapper">
+        <div class="card">
+            <div class="card__img"></div>
+            <div class="card__btn text-big display-block text-black caps">Add Item</div>
+        </div>
+        <div class="card">
+            <div class="card__img"></div>
+            <div class="card__btn text-big display-block text-black caps">Add Item</div>
+        </div>
+        <div class="card">
+            <div class="card__img"></div>
+            <div class="card__btn text-big display-block text-black caps">Add Item</div>
+        </div>
     </div>
-</div>
-<div class="angled-background-container">
+ <div class="angled-background-container">
     <div class="angled-background" id="angled-bg"></div>
-</div>
-
+</div> 
+ <div class="footer">
+    
+    <div class="social-media">
+        <ul>
+            <li>
+                <a target="_blank"  href="https://www.youtube.com/channel/UCOf6u7i2shf695JZfXlW1Hg">
+                    <span class="social-icon social-icon--youtube"></span>
+                </a>
+            </li>
+            <li >
+                <a target="_blank" href="https://twitter.com/lukegawne?lang=en">
+                    <span class="social-icon social-icon--twitter"></span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.facebook.com/Luke-Gawne-271200276269576/">
+                    <span class="social-icon social-icon--facebook"></span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.instagram.com/lukegawne/">
+                    <span class="social-icon social-icon--instagram"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <span class="copy-write" >&copy LukeGawne</span>
+</div> 
 
 <script>
 $(document).ready(function(){

@@ -30,26 +30,60 @@
             size: 18px
             weight: 500
 
-.menu
-    position: absolute
-    padding: 30px
+// .menu
+//     position: absolute
+//     align-items: center
+//     padding: 0px 30px
+//     display: flex
+//     width: 100%
+//     max-width: 1300px
+//     left: 50%
+//     margin-left: -650px
+//     margin-top: 20px
+//     justify-content: space-between
 
-    @media (max-width: 500px)
-        display: none
+//     span 
 
-    &__item
-        margin-left: 25px
-        margin-top: 20px
+//         color: white
+//         flex: 1
+//         letter-spacing: -2px
+//         text-transform: uppercase
+//         font:
+//             family: $changaRegular
+//             size: 60px
+//             weight: 500
+
+
+//     @media (max-width: 500px)
+//         display: none
+
+//     &__item
+//         margin-left: 25px
+//         text-transform: uppercase
+//         flex: auto
 
     &__list
+        flex: 1
+        display: flex
         list-style: none
         margin: 0px
         padding: 0px
 
     &__link 
         color: white
+        position: relative
         font:
             family: $changaRegular
             size: 18px
             weight: 500
+
+    .active 
+        &:after
+            content: ''
+            position: absolute
+            left: -6px
+            bottom: 15px
+            height: 2px
+            width: 60px
+            background: #ab2323
     
