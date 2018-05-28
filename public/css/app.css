@@ -397,6 +397,7 @@ a {
     color: white; }
 
 .menu-mobile-overlay {
+  -webkit-transition: -webkit-transform 200ms;
   -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 200ms;
   -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 200ms;
   -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 200ms;
@@ -416,6 +417,7 @@ a {
   display: inline-block; }
 
 .show .menu-mobile-overlay {
+  -webkit-transition: -webkit-transform 200ms;
   -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
   -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
   -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;

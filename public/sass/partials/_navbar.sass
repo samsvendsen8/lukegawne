@@ -60,6 +60,7 @@
         color: white
 
 .menu-mobile-overlay
+    -webkit-transition: -webkit-transform 200ms;
     @include transition(all, $ease-in-out-cubic, 200ms)
     @include transform(translateX(-100%))
     position: absolute
@@ -72,6 +73,7 @@
 
 .show 
     .menu-mobile-overlay
+        -webkit-transition: -webkit-transform 200ms;
         @include transition(all, $ease-in-out-cubic, 300ms)
         @include transform(translateX(0px))
         opacity: 1
