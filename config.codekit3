@@ -5356,6 +5356,28 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/public\/img\/black-shirt-back.png": {
+		"ft": 32768,
+		"iS": 477720,
+		"oA": 0,
+		"oAP": "\/public\/img\/black-shirt-back.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/public\/img\/black-shirt.png": {
+		"ft": 32768,
+		"iS": 492401,
+		"oA": 0,
+		"oAP": "\/public\/img\/black-shirt.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/public\/img\/icon-footer-facebook-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -5462,6 +5484,17 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/public\/img\/white-shirt.png": {
+		"ft": 32768,
+		"iS": 506654,
+		"oA": 0,
+		"oAP": "\/public\/img\/white-shirt.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},

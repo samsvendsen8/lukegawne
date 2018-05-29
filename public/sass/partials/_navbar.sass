@@ -31,7 +31,7 @@
             weight: 500
 
 .menu-mobile
-    position: absolute
+    position: relative
     align-items: center
     z-index: 999
     display: flex
@@ -60,7 +60,8 @@
         color: white
 
 .menu-mobile-overlay
-    @include transition(all, 2s, 300ms)
+    -webkit-transition: -webkit-transform 200ms;
+    @include transition(all, $ease-in-out-cubic, 200ms)
     @include transform(translateX(-100%))
     position: absolute
     opacity: 0
@@ -73,7 +74,7 @@
 .show 
     .menu-mobile-overlay
         -webkit-transition: -webkit-transform 200ms;
-        @include transition(all, 2s, 300ms)
+        @include transition(all, $ease-in-out-cubic, 300ms)
         @include transform(translateX(0px))
         opacity: 1
         display: flex
@@ -119,18 +120,29 @@
 
 
 .menu
-    position: absolute
+    @include transition(color,background, $ease-in-out-cubic, 300ms)
+    position: relative
     align-items: center
-    z-index: 999
+    z-index: 99999
     display: flex
     width: 100%
-    margin-top: 20px
     justify-content: space-between
+    position: fixed 
+    padding-top: 20px
+
+    &--color
+        background: white
+
+        .menu__link
+            color: black
+
+        span 
+            color: black !important
 
     span 
 
         color: white
-        flex: 1
+        flex: 4
         letter-spacing: -2px
         text-transform: uppercase
         font:
@@ -168,11 +180,12 @@
 
     .active 
         &:after
+            @include transition(all, $ease-in-out-cubic, 300ms)
             content: ''
             position: absolute
-            left: -6px
+            left: -4px
             bottom: 15px
             height: 2px
-            width: 60px
+            width: 120%
             background: #ab2323
     

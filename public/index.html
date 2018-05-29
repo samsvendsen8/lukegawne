@@ -35,28 +35,21 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<nav class="menu container">
+<nav id="menu" class="menu container">
     <span>Gawne</span>
     <ul class="menu__list" id="nav">
         <li class="menu__item  enu-item--current">
-            <a class="menu__link active" href="#topbar">Home</a>
+            <a class="menu__link active" href="#one">Home</a>
         </li>
         <li class="menu__item  enu-item--current">
-            <a class="menu__link" href="#topbar">Music & Videos</a>
-        </li>
-      
-        <li class="menu__item">
-            <a class="menu__link" href="#price">News</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#price">Upcoming Shows</a>
+            <a class="menu__link" href="#two">Shop</a>
         </li>
     </ul>
 </nav>
 <div class="nav-container" id="menu-mobile">
     <nav class="menu-mobile">
         <span class="logo">Gawne</span>
-        <span class="expand">Open</span>
+
     </nav>
     <nav class="menu-mobile-overlay">
         <span class="expand expand--open">Close</span>
@@ -78,8 +71,13 @@
         </ul>
     </nav>
 </div>
-
-<div class="hero-unit">
+<div id="one" class="hero-unit">
+    <video class="video container" id="video-background" autoplay muted >
+        <source src="https://s3.ca-central-1.amazonaws.com/lukegawne/music.mp4" type="video/mp4">
+    </video>
+    <!-- <div class="hero-img">
+        <image src="img/lg-bg.jpg"></image>
+    </div> -->
     <div class="album-widget">
         <div class="album-widget__art">
             <div class="play-button"></div>
@@ -89,10 +87,7 @@
             <span class="text-large display-block text-black caps">Fuck Donald Trump </span>
         </div>
     </div>
-    <video class="video container" id="video-background" autoplay muted >
-        <source src="https://s3.ca-central-1.amazonaws.com/lukegawne/music.mp4" type="video/mp4">
-    </video>
-    <span class="btn-merch text-extra-large display-block text-black">Merch</span>
+    <a href="#two" class="btn-merch text-extra-large display-block text-black">Merch</a>
     <!-- <div class="album">
         <div class="album__image"></div>
         <div class="album__content">
@@ -101,24 +96,20 @@
         </div>
     </div> -->
 </div>
-<div class="merch">
+<div id="two" class="merch">
     <span class="text-extra-large display-block text-black">Merch</span>
     <div class="line"></div>
 </div>
 <div class="card-wrapper">
-        <div class="card">
-            <div class="card__img"></div>
-            <div class="card__btn text-big display-block text-black caps">Add Item</div>
-        </div>
-        <div class="card">
-            <div class="card__img"></div>
-            <div class="card__btn text-big display-block text-black caps">Add Item</div>
-        </div>
-        <div class="card">
-            <div class="card__img"></div>
-            <div class="card__btn text-big display-block text-black caps">Add Item</div>
-        </div>
-    </div>
+    <a target="_blank" href="https://teespring.com/gawnemadmerch#pid=369&cid=6513&sid=front" class="card">
+        <div class="card__img"></div>
+        <div class="card__btn text-big display-block text-black caps">Buy Now</div>
+    </a>
+    <a target="_blank" href="https://teespring.com/gawnemad#pid=369&cid=6512&sid=front" class="card">
+        <div class="card__img2"></div>
+        <div class="card__btn text-big display-block text-black caps">Buy Now</div>
+    </a>
+</div>
  <div class="angled-background-container">
     <div class="angled-background" id="angled-bg"></div>
 </div> 
@@ -157,7 +148,48 @@ $(document).ready(function(){
         $('.nav-container').toggleClass('show');
     });
 });
-</script> 
+</script>
+<script>
+    var myVideo =  iframe.getElementById('myVideo'); 
+    myVideo.mute(); 
+</script>
+
+<script>
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+        $(".menu").addClass("menu--color");
+    } else {
+        $(".menu").removeClass("menu--color");
+    }
+});
+</script>
+<script>
+$('a[href*="#"]').on('click', function (e) {
+	e.preventDefault();
+
+	$('html, body').animate({
+		scrollTop: $($(this).attr('href')).offset().top
+	}, 500, 'linear');
+});
+</script>
+
+<script>
+    var btnContainer = document.getElementById("menu");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("menu__link");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
