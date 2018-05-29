@@ -137,7 +137,7 @@
         max-height: 100px
 
         .menu__link
-            color: black
+            color: black !important
 
         span 
             color: black !important
@@ -174,14 +174,22 @@
         
 
     &__link 
-        color: white
+        @include transition(all, $ease-in-out-cubic, 300ms)
+        color: darken(white, 15%)
         position: relative
+        background: transparent
         font:
             family: $changaRegular
             size: 18px
             weight: 500
 
+        &:hover 
+            color: white  
+
     .active 
+
+        color: white 
+
         &:after
             @include transition(all, $ease-in-out-cubic, 300ms)
             content: ''

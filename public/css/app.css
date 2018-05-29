@@ -33,47 +33,50 @@ a {
 body:-webkit-full-page-media {
   background: black; }
 
-.hide .video {
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -moz-transition: opacity 0.2s ease-in-out;
-  -spec-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-  opacity: 0; }
+@media (min-width: 768px) {
+  .hide .video {
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -spec-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0; }
+  .hide .background-color {
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -spec-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0; } }
 
-.hide .background-color {
-  -webkit-transition: background 0.2s ease-in-out;
-  -moz-transition: background 0.2s ease-in-out;
-  -spec-transition: background 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out;
-  opacity: 0; }
+@media (min-width: 768px) {
+  .background-color {
+    -webkit-animation: fadeInn 2s ease-in;
+    -moz-animation: fadeInn 2s ease-in;
+    -spec-animation: fadeInn 2s ease-in;
+    animation: fadeInn 2s ease-in;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    position: absolute; } }
 
-.background-color {
-  -webkit-animation: fadeInn 3s ease-in;
-  -moz-animation: fadeInn 3s ease-in;
-  -spec-animation: fadeInn 3s ease-in;
-  animation: fadeInn 3s ease-in;
-  height: 100vh;
-  width: 100vw;
-  background: black;
-  position: absolute; }
+@media (min-width: 768px) {
+  .video {
+    -webkit-animation: fadeInn 3s ease-in;
+    -moz-animation: fadeInn 3s ease-in;
+    -spec-animation: fadeInn 3s ease-in;
+    animation: fadeInn 3s ease-in;
+    width: 100%;
+    height: 807px;
+    top: -100px;
+    object-fit: cover;
+    position: relative;
+    border: none;
+    pointer-events: none;
+    padding-top: 40px;
+    background: black; } }
 
-.video {
-  -webkit-animation: fadeInn 3s ease-in;
-  -moz-animation: fadeInn 3s ease-in;
-  -spec-animation: fadeInn 3s ease-in;
-  animation: fadeInn 3s ease-in;
-  width: 100%;
-  height: 807px;
-  top: -100px;
-  object-fit: cover;
-  position: relative;
-  border: none;
-  pointer-events: none;
-  padding-top: 40px;
-  background: black; }
-  @media (max-width: 768px) {
-    .video {
-      display: none; } }
+@media (max-width: 768px) {
+  .video {
+    display: none; } }
 
 .social-media {
   display: flex;
@@ -142,7 +145,7 @@ video::-webkit-media-controls-panel {
   background-image: url(../img/lg-bg.jpg); }
   @media (max-width: 768px) {
     .hero-unit {
-      background-image: url("../img/lg-bg.jpg");
+      background-image: url("../img/lg-bg-mobile.jpg");
       background-size: contain;
       background-repeat: no-repeat;
       height: 290px;
@@ -204,7 +207,8 @@ video::-webkit-media-controls-panel {
     .album-widget {
       bottom: 25px;
       margin: 20px;
-      left: 0px; } }
+      left: 50%;
+      margin-left: -140px; } }
   .album-widget__content {
     width: auto;
     width: 300px;
@@ -216,7 +220,7 @@ video::-webkit-media-controls-panel {
     padding-left: 20px; }
     @media (max-width: 768px) {
       .album-widget__content {
-        width: auto; } }
+        width: 200px; } }
   .album-widget__art {
     height: 80px;
     width: 80px;
@@ -302,7 +306,7 @@ video::-webkit-media-controls-panel {
   @media (max-width: 768px) {
     .card-wrapper {
       flex-direction: column;
-      padding: 20px; }
+      padding: 40px; }
       .card-wrapper .card {
         max-width: 100% !important;
         margin-right: 0px !important;
@@ -360,10 +364,10 @@ video::-webkit-media-controls-panel {
         box-shadow: 0px 8px 57px rgba(0, 0, 0, 0.4);
         background: #71a0d4; }
     .card-wrapper .card__img, .card-wrapper .card__img2 {
-      -webkit-transition: opacity 0.2s ease-in-out;
-      -moz-transition: opacity 0.2s ease-in-out;
-      -spec-transition: opacity 0.2s ease-in-out;
-      transition: opacity 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -spec-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       opacity: 1;
       background-size: contain;
       height: 100%;
@@ -372,9 +376,13 @@ video::-webkit-media-controls-panel {
       padding: 21px;
       bottom: 0px;
       background-repeat: no-repeat; }
+      @media (max-width: 768px) {
+        .card-wrapper .card__img, .card-wrapper .card__img2 {
+          margin-left: 20px; } }
     .card-wrapper .card__img {
       background-image: url("../img/black-shirt.png"); }
       .card-wrapper .card__img:hover {
+        opacity: 1;
         background-image: url("../img/black-shirt-back.png"); }
     .card-wrapper .card__img2 {
       background-image: url("../img/white-shirt.png"); }
@@ -488,10 +496,10 @@ video::-webkit-media-controls-panel {
   background-image: url(../img/lg-bg.jpg); }
   @media (max-width: 768px) {
     .my-container {
-      background-image: url("../img/lg-bg.jpg");
+      background-image: url("../img/lg-bg-mobile.png");
       background-size: contain;
       background-repeat: no-repeat;
-      height: 290px;
+      height: 380px;
       width: 100%; } }
 
 .video-outer {
@@ -647,7 +655,7 @@ video::-webkit-media-controls-panel {
     background: rgba(255, 255, 255, 0.95);
     max-height: 100px; }
     .menu--color .menu__link {
-      color: black; }
+      color: black !important; }
     .menu--color span {
       color: black !important; }
   .menu span {
@@ -675,20 +683,29 @@ video::-webkit-media-controls-panel {
       .menu__list {
         display: none; } }
   .menu__link {
-    color: white;
-    position: relative;
-    font-family: "ChangaRegular";
-    font-size: 18px;
-    font-weight: 500; }
-  .menu .active:after {
     -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
     -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
     -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
     transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
-    content: '';
-    position: absolute;
-    left: -4px;
-    bottom: 15px;
-    height: 2px;
-    width: 120%;
-    background: #ab2323; }
+    color: #d9d9d9;
+    position: relative;
+    background: transparent;
+    font-family: "ChangaRegular";
+    font-size: 18px;
+    font-weight: 500; }
+    .menu__link:hover {
+      color: white; }
+  .menu .active {
+    color: white; }
+    .menu .active:after {
+      -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+      -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+      -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+      transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+      content: '';
+      position: absolute;
+      left: -4px;
+      bottom: 15px;
+      height: 2px;
+      width: 120%;
+      background: #ab2323; }
