@@ -28,7 +28,7 @@ a
     background: black
 
 .container
-    padding: 0px 100px
+    padding: 0px 97px
     position: relative
     margin: auto 0
 
@@ -37,12 +37,27 @@ body:-webkit-full-page-media
 
 .hide
     .video
-        @include transition(all .2s ease-in-out)
+        @include transition(opacity .2s ease-in-out)
         opacity: 0
+    
+    .background-color
+        @include transition(background .2s ease-in-out)
+        opacity: 0
+
+.background-color
+    @include animation(fadeInn 3s ease-in)
+    height: 100vh 
+    width: 100vw 
+    background: black
+    position: absolute
+
 .video
     @include animation(fadeInn 3s ease-in)
     width: 100%
-    height: 100%
+    height: 807px
+    top: -100px
+    object-fit: cover
+    position: relative
     border: none
     pointer-events: none
     padding-top: 40px
@@ -51,9 +66,6 @@ body:-webkit-full-page-media
     @media (max-width: 768px)
         display: none
 
-    html 
-        body 
-            background: black
 .social-media 
     display: flex
     right: 10px
@@ -65,7 +77,7 @@ body:-webkit-full-page-media
         margin: 0px
 
         li
-            @include transition(all .2s ease-in-out)
+            @include transition(transform .2s ease-in-out)
             list-style: none 
             background: grey
             height: 44px
@@ -77,7 +89,6 @@ body:-webkit-full-page-media
 
             &:hover 
                 +transform(scale(.9))
-
 
             a 
                 width: 45px
@@ -131,61 +142,6 @@ video::-webkit-media-controls-panel
         width: 100%
 
 
-    .album
-        @include animation(fadeInn2 .6s ease-in)
-        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
-        border-radius: 4px
-        height: 260px  
-        width: 700px
-        background: white 
-        position: absolute
-        top: 405px
-        right: 50px
-        z-index: 9999
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, .1)
-        display: flex
-
-        &__image
-            flex: 2
-            opacity: .6
-            background:
-                image: url('../img/album.png')
-                size: 158%
-                position: -61px -10px
-
-        &__content
-            flex: 3
-            align-items: center
-            display: flex
-            flex-direction: column
-
-            &__text
-                font-family: $changaRegular
-                font-size: 24px
-                margin-top: 52px
-                color: #787571
-                font-weight: 600
-                display: block
-                text-align: center
-                padding: 0px 74px
-                line-height: 33px
-
-            &__btn
-                @include transition(all .2s ease-in-out)
-                cursor: pointer
-                font-size: 20px
-                background: $brand-color
-                border-radius: 999px
-                font-family: $changaRegular
-                color: white
-                padding: 10px 70px
-                margin-top: 30px
-                box-shadow: 0px 14px 36px rgba(80, 225, 193, .4)
-
-                &:hover
-                    box-shadow: 0px 14px 36px rgba(80, 225, 193, .6)
-
-
 .angled-background-container
     z-index: 1
     height: 1px
@@ -194,7 +150,6 @@ video::-webkit-media-controls-panel
         display: none
 
     .angled-background
-        @include animation(fadeInn .8s ease-in)
         overflow-x: auto
         overflow-y: hidden
         -moz-tab-size: 4
@@ -245,10 +200,10 @@ video::-webkit-media-controls-panel
             weight: 500
 
 .album-widget
-    position: absolute
+    position: relative
     left: 120px          
     display: flex
-    bottom: 120px
+    bottom: -10px
     z-index: 9999
 
     @media (max-width: 768px)
@@ -286,7 +241,7 @@ video::-webkit-media-controls-panel
             left: 50%
             margin-left: -22px
             border-radius: 999px
-            background: rgba(0,0,0, .2)
+            background: rgba(0, 0, 0, .2)
 
             &:after 
                 top: 10px
@@ -387,11 +342,17 @@ video::-webkit-media-controls-panel
         position: relative
         z-index: 999
 
+        &:hover 
+            .card__btn
+                @include transform(scale(1.05))
+                box-shadow: 0px 8px 57px rgba(0,0,0, .4)
+                background: darken(#85adda, 5%)
+
         &:last-of-type
             margin-right: 0px
 
         &__btn
-            @include transition(all .2s ease-in-out)
+            @include transition(background, box-shadow, .2s ease-in-out)
             background: #85adda
             width: 200px 
             height: 50px
@@ -414,6 +375,8 @@ video::-webkit-media-controls-panel
                 background: darken(#85adda, 5%)
 
         &__img, &__img2
+            @include transition(opacity .2s ease-in-out)
+            opacity: 1
             background-size: contain
             height: 100%
             width: 100%
@@ -438,14 +401,17 @@ video::-webkit-media-controls-panel
     .btn-stop
         opacity: 0
 
+    .my-container
+
 .btn-stop
     @include animation(fadeInn 3s ease-in)
-    background: #000000
+    @include transition(background .2s ease-in-out)
+    background: rgba(0,0,0,.4)
     width: auto
     cursor: pointer
     /* height: 62px; */
-    top: 140px
-    right: 140px
+    top: 155px
+    right: 126px
     padding: 13px 30px
     margin-left: -90px
     color: white;
@@ -453,7 +419,14 @@ video::-webkit-media-controls-panel
     position: absolute;
     font-size: 20px
 
+    &:hover
+        background: black
+
+    @media (max-width: 768px)
+        display: none !important
+
 .btn-merch
+    @include transition(background .2s ease-in-out)
     background: #D61111
     width: 180px
     height: 62px
@@ -463,7 +436,10 @@ video::-webkit-media-controls-panel
     color: white
     border-radius: 999px
     position: relative
-    bottom: 133px
+    margin-bottom: 10px
+
+    &:hover
+        background: darken(#D61111, 5%)
 
     @media (max-width: 768px)
         display: none !important
@@ -516,3 +492,29 @@ video::-webkit-media-controls-panel
 
     100%
         opacity: 1
+
+.my-container
+    width: 100%
+    display: inline-block
+    display: flex
+    height: 97vh
+    flex-direction: column
+    background-size: cover
+    background-image: url(../img/lg-bg.jpg)
+
+    @media (max-width: 768px)
+        background-image: url('../img/lg-bg.jpg')
+        background-size: contain
+        background-repeat: no-repeat 
+        height: 290px
+        width: 100%
+
+.video-outer
+    position: relative
+    display: inline-block
+    overflow: hidden
+    flex: 1
+    margin: 100px
+
+.other-things
+    margin-top: -211px

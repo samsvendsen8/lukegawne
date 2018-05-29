@@ -71,13 +71,32 @@
         </ul>
     </nav>
 </div>
-<div id="one" class="hero-unit">
-    <video class="video container" id="video-background" autoplay muted >
+<div id="one" class="my-container">
+    <div class="background-color"></div>
+    <div class="video-outer">
+        <video class="video container" id="video-background" autoplay muted >
         <source src="https://s3.ca-central-1.amazonaws.com/lukegawne/music.mp4" type="video/mp4">
     </video>
-    <!-- <div class="hero-img">
-        <image src="img/lg-bg.jpg"></image>
-    </div> -->
+    </div>
+    <div class="other-things">
+        <a target="_blank" href="https://open.spotify.com/album/47NSKJ736L04ovIw9ityDF?si=eU3-nMQLRkqW9PDaZxBafg" class="album-widget">
+            <div class="album-widget__art">
+                <div class="play-button"></div>
+            </div>
+            <div class="album-widget__content">
+                <span class="text-label display-block text-black caps">New Album</span>
+                <span class="text-large display-block text-black caps">Gawne Mad </span>
+            </div>
+        </a>
+        <span  class="btn-stop text-extra-large display-block text-black">Stop Video</span>
+        <a href="#two" class="btn-merch text-extra-large display-block text-black">Merch</a>
+    </div>
+</div>
+ <!-- <div id="one" class="hero-unit">
+    <video class="video container" id="video-background" autoplay muted >
+        <source src="img/mything.mp4" type="video/mp4">
+    </video>
+
     <div class="album-widget">
         <div class="album-widget__art">
             <div class="play-button"></div>
@@ -89,14 +108,8 @@
     </div>
     <span  class="btn-stop text-extra-large display-block text-black">Stop Video</span>
     <a href="#two" class="btn-merch text-extra-large display-block text-black">Merch</a>
-    <!-- <div class="album">
-        <div class="album__image"></div>
-        <div class="album__content">
-            <span class="album__content__text">New single "Jungle" out now</span>
-            <a href="https://www.youtube.com/watch?v=I8JX9K0lVHM" target="_blank" class="album__content__btn">Listen Now</a>
-        </div>
-    </div> -->
-</div>
+
+</div>  -->
 <div id="two" class="merch">
     <span class="text-extra-large display-block text-black">Merch</span>
     <div class="line"></div>
@@ -140,7 +153,7 @@
             </li>
         </ul>
     </div>
-    <span class="copy-write" >&copy LukeGawne</span>
+    <span class="copy-write" >&copy 2018 LukeGawne</span>
 </div> 
 
 <script>
@@ -161,7 +174,7 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
     $('.btn-stop').click(function(){
-        $('.hero-unit').toggleClass('hide');
+        $('.my-container').toggleClass('hide');
     });
 });
 </script>
@@ -174,7 +187,7 @@ $(document).ready(function(){
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 500) {
+    if (scroll >= 100) {
         $(".menu").addClass("menu--color");
     } else {
         $(".menu").removeClass("menu--color");
@@ -183,6 +196,15 @@ $(window).scroll(function() {
 </script>
 <script>
 $('.menu__link[href*="#"]').on('click', function (e) {
+	e.preventDefault();
+
+	$('html, body').animate({
+		scrollTop: $($(this).attr('href')).offset().top
+	}, 500, 'linear');
+});
+</script>
+<script>
+$('.btn-merch[href*="#"]').on('click', function (e) {
 	e.preventDefault();
 
 	$('html, body').animate({

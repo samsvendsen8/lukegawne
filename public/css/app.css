@@ -26,7 +26,7 @@ a {
   background: black; }
 
 .container {
-  padding: 0px 100px;
+  padding: 0px 97px;
   position: relative;
   margin: auto 0; }
 
@@ -34,11 +34,28 @@ body:-webkit-full-page-media {
   background: black; }
 
 .hide .video {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -spec-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -spec-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   opacity: 0; }
+
+.hide .background-color {
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -spec-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  opacity: 0; }
+
+.background-color {
+  -webkit-animation: fadeInn 3s ease-in;
+  -moz-animation: fadeInn 3s ease-in;
+  -spec-animation: fadeInn 3s ease-in;
+  animation: fadeInn 3s ease-in;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  position: absolute; }
 
 .video {
   -webkit-animation: fadeInn 3s ease-in;
@@ -46,7 +63,10 @@ body:-webkit-full-page-media {
   -spec-animation: fadeInn 3s ease-in;
   animation: fadeInn 3s ease-in;
   width: 100%;
-  height: 100%;
+  height: 807px;
+  top: -100px;
+  object-fit: cover;
+  position: relative;
   border: none;
   pointer-events: none;
   padding-top: 40px;
@@ -54,8 +74,6 @@ body:-webkit-full-page-media {
   @media (max-width: 768px) {
     .video {
       display: none; } }
-  .video html body {
-    background: black; }
 
 .social-media {
   display: flex;
@@ -66,10 +84,9 @@ body:-webkit-full-page-media {
     padding: 8px;
     margin: 0px; }
     .social-media ul li {
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -spec-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
+      -webkit-transition: -webkit-transform 0.2s ease-in-out;
+      -moz-transition: -moz-transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
       list-style: none;
       background: grey;
       height: 44px;
@@ -130,59 +147,6 @@ video::-webkit-media-controls-panel {
       background-repeat: no-repeat;
       height: 290px;
       width: 100%; } }
-  .hero-unit .album {
-    -webkit-animation: fadeInn2 0.6s ease-in;
-    -moz-animation: fadeInn2 0.6s ease-in;
-    -spec-animation: fadeInn2 0.6s ease-in;
-    animation: fadeInn2 0.6s ease-in;
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-    border-radius: 4px;
-    height: 260px;
-    width: 700px;
-    background: white;
-    position: absolute;
-    top: 405px;
-    right: 50px;
-    z-index: 9999;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-    display: flex; }
-    .hero-unit .album__image {
-      flex: 2;
-      opacity: .6;
-      background-image: url("../img/album.png");
-      background-size: 158%;
-      background-position: -61px -10px; }
-    .hero-unit .album__content {
-      flex: 3;
-      align-items: center;
-      display: flex;
-      flex-direction: column; }
-      .hero-unit .album__content__text {
-        font-family: "ChangaRegular";
-        font-size: 24px;
-        margin-top: 52px;
-        color: #787571;
-        font-weight: 600;
-        display: block;
-        text-align: center;
-        padding: 0px 74px;
-        line-height: 33px; }
-      .hero-unit .album__content__btn {
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -spec-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        font-size: 20px;
-        background: #50E1C1;
-        border-radius: 999px;
-        font-family: "ChangaRegular";
-        color: white;
-        padding: 10px 70px;
-        margin-top: 30px;
-        box-shadow: 0px 14px 36px rgba(80, 225, 193, 0.4); }
-        .hero-unit .album__content__btn:hover {
-          box-shadow: 0px 14px 36px rgba(80, 225, 193, 0.6); }
 
 .angled-background-container {
   z-index: 1;
@@ -191,10 +155,6 @@ video::-webkit-media-controls-panel {
     .angled-background-container {
       display: none; } }
   .angled-background-container .angled-background {
-    -webkit-animation: fadeInn 0.8s ease-in;
-    -moz-animation: fadeInn 0.8s ease-in;
-    -spec-animation: fadeInn 0.8s ease-in;
-    animation: fadeInn 0.8s ease-in;
     overflow-x: auto;
     overflow-y: hidden;
     -moz-tab-size: 4;
@@ -235,10 +195,10 @@ video::-webkit-media-controls-panel {
     font-weight: 500; }
 
 .album-widget {
-  position: absolute;
+  position: relative;
   left: 120px;
   display: flex;
-  bottom: 120px;
+  bottom: -10px;
   z-index: 9999; }
   @media (max-width: 768px) {
     .album-widget {
@@ -360,13 +320,22 @@ video::-webkit-media-controls-panel {
     margin-right: 120px;
     position: relative;
     z-index: 999; }
+    .card-wrapper .card:hover .card__btn {
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -spec-transform: scale(1.05);
+      transform: scale(1.05);
+      box-shadow: 0px 8px 57px rgba(0, 0, 0, 0.4);
+      background: #71a0d4; }
     .card-wrapper .card:last-of-type {
       margin-right: 0px; }
     .card-wrapper .card__btn {
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -spec-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
+      -webkit-transition: background, box-shadow, 0.2s ease-in-out;
+      -moz-transition: background, box-shadow, 0.2s ease-in-out;
+      -spec-transition: background, box-shadow, 0.2s ease-in-out;
+      transition: background, box-shadow, 0.2s ease-in-out;
       background: #85adda;
       width: 200px;
       height: 50px;
@@ -391,6 +360,11 @@ video::-webkit-media-controls-panel {
         box-shadow: 0px 8px 57px rgba(0, 0, 0, 0.4);
         background: #71a0d4; }
     .card-wrapper .card__img, .card-wrapper .card__img2 {
+      -webkit-transition: opacity 0.2s ease-in-out;
+      -moz-transition: opacity 0.2s ease-in-out;
+      -spec-transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
+      opacity: 1;
       background-size: contain;
       height: 100%;
       width: 100%;
@@ -415,20 +389,33 @@ video::-webkit-media-controls-panel {
   -moz-animation: fadeInn 3s ease-in;
   -spec-animation: fadeInn 3s ease-in;
   animation: fadeInn 3s ease-in;
-  background: #000000;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -spec-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
   width: auto;
   cursor: pointer;
   /* height: 62px; */
-  top: 140px;
-  right: 140px;
+  top: 155px;
+  right: 126px;
   padding: 13px 30px;
   margin-left: -90px;
   color: white;
   border-radius: 999px;
   position: absolute;
   font-size: 20px; }
+  .btn-stop:hover {
+    background: black; }
+  @media (max-width: 768px) {
+    .btn-stop {
+      display: none !important; } }
 
 .btn-merch {
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -spec-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
   background: #D61111;
   width: 180px;
   height: 62px;
@@ -438,7 +425,9 @@ video::-webkit-media-controls-panel {
   color: white;
   border-radius: 999px;
   position: relative;
-  bottom: 133px; }
+  margin-bottom: 10px; }
+  .btn-merch:hover {
+    background: #be0f0f; }
   @media (max-width: 768px) {
     .btn-merch {
       display: none !important; } }
@@ -488,6 +477,32 @@ video::-webkit-media-controls-panel {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.my-container {
+  width: 100%;
+  display: inline-block;
+  display: flex;
+  height: 97vh;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url(../img/lg-bg.jpg); }
+  @media (max-width: 768px) {
+    .my-container {
+      background-image: url("../img/lg-bg.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 290px;
+      width: 100%; } }
+
+.video-outer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  flex: 1;
+  margin: 100px; }
+
+.other-things {
+  margin-top: -211px; }
 
 .logo-icon {
   background-image: url("../img/lg-icon.svg");
@@ -611,20 +626,26 @@ video::-webkit-media-controls-panel {
   display: none; }
 
 .menu {
-  -webkit-transition: color, background, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
-  -moz-transition: color, background, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
-  -spec-transition: color, background, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
-  transition: color, background, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+  -webkit-transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+  -moz-transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+  -spec-transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+  transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
   position: relative;
   align-items: center;
   z-index: 99999;
   display: flex;
+  max-height: 126px;
   width: 100%;
   justify-content: space-between;
   position: fixed;
   padding-top: 20px; }
   .menu--color {
-    background: white; }
+    -webkit-transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+    -moz-transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+    -spec-transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+    transition: max-height, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
+    background: rgba(255, 255, 255, 0.95);
+    max-height: 100px; }
     .menu--color .menu__link {
       color: black; }
     .menu--color span {

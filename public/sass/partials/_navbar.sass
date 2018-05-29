@@ -120,18 +120,21 @@
 
 
 .menu
-    @include transition(color,background, $ease-in-out-cubic, 300ms)
+    @include transition(max-height, $ease-in-out-cubic, 300ms)
     position: relative
     align-items: center
     z-index: 99999
     display: flex
+    max-height: 126px
     width: 100%
     justify-content: space-between
     position: fixed 
     padding-top: 20px
 
     &--color
-        background: white
+        @include transition(max-height, $ease-in-out-cubic, 300ms)
+        background: rgba(255, 255, 255, .95)
+        max-height: 100px
 
         .menu__link
             color: black
