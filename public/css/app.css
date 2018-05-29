@@ -526,6 +526,10 @@ video::-webkit-media-controls-panel {
 
 .other-things {
   margin-top: -211px; }
+  @media (max-width: 768px) {
+    .other-things {
+      display: flex;
+      justify-content: space-around; } }
 
 .logo-icon {
   background-image: url("../img/lg-icon.svg");
@@ -614,7 +618,7 @@ video::-webkit-media-controls-panel {
     -o-transform: rotate(-45deg);
     -spec-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 6px;
+    top: 7px;
     position: relative; }
   .show .expand .two {
     opacity: 0; }
@@ -629,7 +633,7 @@ video::-webkit-media-controls-panel {
     -o-transform: rotate(45deg);
     -spec-transform: rotate(45deg);
     transform: rotate(45deg);
-    top: -6px;
+    top: -7px;
     position: relative; }
 
 .show .menu-mobile-overlay {
@@ -687,7 +691,7 @@ video::-webkit-media-controls-panel {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 20px;
+  top: 44px;
   right: 20px;
   z-index: 99999; }
   .expand span {
@@ -703,8 +707,8 @@ video::-webkit-media-controls-panel {
     transform: rotate(0deg);
     opacity: 1;
     margin-bottom: 4px;
-    height: 2px;
-    width: 16px;
+    height: 3px;
+    width: 19px;
     background: white; }
   .expand .one {
     -webkit-transform: rotate(0deg);
