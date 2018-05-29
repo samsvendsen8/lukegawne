@@ -6,7 +6,7 @@
     
 .menu-mobile
     position: absolute
-    padding: 30px
+    padding: 0px 30px
 
     .active
         background: black
@@ -36,7 +36,6 @@
     z-index: 999
     display: flex
     width: 100%
-    margin-top: 20px
     justify-content: space-between
 
     @media (min-width: 768px)
@@ -69,18 +68,41 @@
     height: 100vh 
     width: 100vw
     opacity : 0px
+    z-index: 999
     display: inline-block
 
 .show 
+    .expand 
+
+        span 
+            background: black 
+
+        .one
+            @include transition(all, $ease-in-out-cubic, 500ms)
+            @include transform(rotate(-45deg))
+            top: 6px
+            position: relative
+
+        .two 
+           opacity: 0
+
+        .three
+           @include transition(all, $ease-in-out-cubic, 500ms)
+           @include transform(rotate(45deg))
+           top: -6px
+           position: relative
+
     .menu-mobile-overlay
         -webkit-transition: -webkit-transform 200ms;
         @include transition(all, $ease-in-out-cubic, 300ms)
         @include transform(translateX(0px))
         opacity: 1
+        position: absolute
+        top: 0px
         display: flex
         flex-direction: column
         text-align: center
-        z-index: 99999
+        z-index: 9999
 
         ul 
             display: inline-block
@@ -117,6 +139,30 @@
 .expand--open
     display: none
 
+.expand 
+    display: flex
+    flex-direction: column 
+    position: absolute
+    top: 20px
+    right: 20px
+    z-index: 99999
+
+    span 
+        @include transition(all, $ease-in-out-cubic, 300ms)
+        @include transform(rotate(0deg))
+        opacity: 1
+        margin-bottom: 4px
+        height: 2px
+        width: 16px
+        background: white
+
+    .one 
+        @include transform(rotate(0deg))
+
+    .three 
+        @include transform(rotate(0deg))
+
+    
 
 
 .menu
