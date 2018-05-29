@@ -33,6 +33,13 @@ a {
 body:-webkit-full-page-media {
   background: black; }
 
+.hide .video {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -spec-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0; }
+
 .video {
   -webkit-animation: fadeInn 3s ease-in;
   -moz-animation: fadeInn 3s ease-in;
@@ -42,6 +49,7 @@ body:-webkit-full-page-media {
   height: 100%;
   border: none;
   pointer-events: none;
+  padding-top: 40px;
   background: black; }
   @media (max-width: 768px) {
     .video {
@@ -113,7 +121,8 @@ video::-webkit-media-controls-panel {
   height: 100vh;
   width: 100%;
   position: relative;
-  top: 20px; }
+  background-size: cover;
+  background-image: url(../img/lg-bg.jpg); }
   @media (max-width: 768px) {
     .hero-unit {
       background-image: url("../img/lg-bg.jpg");
@@ -397,6 +406,27 @@ video::-webkit-media-controls-panel {
       background-image: url("../img/white-shirt.png"); }
       .card-wrapper .card__img2:hover {
         background-image: url("../img/white-shirt-back.png"); }
+
+.hide .btn-stop {
+  opacity: 0; }
+
+.btn-stop {
+  -webkit-animation: fadeInn 3s ease-in;
+  -moz-animation: fadeInn 3s ease-in;
+  -spec-animation: fadeInn 3s ease-in;
+  animation: fadeInn 3s ease-in;
+  background: #000000;
+  width: auto;
+  cursor: pointer;
+  /* height: 62px; */
+  top: 140px;
+  right: 140px;
+  padding: 13px 30px;
+  margin-left: -90px;
+  color: white;
+  border-radius: 999px;
+  position: absolute;
+  font-size: 20px; }
 
 .btn-merch {
   background: #D61111;

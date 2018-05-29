@@ -87,6 +87,7 @@
             <span class="text-large display-block text-black caps">Fuck Donald Trump </span>
         </div>
     </div>
+    <span  class="btn-stop text-extra-large display-block text-black">Stop Video</span>
     <a href="#two" class="btn-merch text-extra-large display-block text-black">Merch</a>
     <!-- <div class="album">
         <div class="album__image"></div>
@@ -149,6 +150,21 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<!-- <script>
+$(document).ready(function(){
+    $('.expand').click(function(){
+        $('.nav-container').toggleClass('show');
+    });
+});
+</script> -->
+<script>
+$(document).ready(function(){
+    $('.btn-stop').click(function(){
+        $('.hero-unit').toggleClass('hide');
+    });
+});
+</script>
 <script>
     var myVideo =  iframe.getElementById('myVideo'); 
     myVideo.mute(); 
@@ -166,7 +182,7 @@ $(window).scroll(function() {
 });
 </script>
 <script>
-$('a[href*="#"]').on('click', function (e) {
+$('.menu__link[href*="#"]').on('click', function (e) {
 	e.preventDefault();
 
 	$('html, body').animate({
