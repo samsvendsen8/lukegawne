@@ -425,6 +425,9 @@ video::-webkit-media-controls-panel {
   width: 38px;
   border: none;
   padding: 5px; }
+  @media (max-width: 768px) {
+    .mute-btn {
+      display: none !important; } }
   .mute-btn span {
     display: inline-block;
     height: 28px;
