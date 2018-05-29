@@ -407,6 +407,37 @@ video::-webkit-media-controls-panel {
 .hide .btn-stop {
   opacity: 0; }
 
+.hide .mute-btn {
+  opacity: 0; }
+
+.mute-btn {
+  -webkit-animation: fadeInn 3s ease-in;
+  -moz-animation: fadeInn 3s ease-in;
+  -spec-animation: fadeInn 3s ease-in;
+  animation: fadeInn 3s ease-in;
+  position: absolute;
+  top: 155px;
+  right: 292px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
+  border: none;
+  padding: 5px; }
+  .mute-btn span {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-image: url("../img/unmute.svg");
+    background-repeat: no-repeat; }
+  .mute-btn:focus {
+    outline: none; }
+
+.unmute .mute-btn span {
+  background-image: url("../img/mute.svg"); }
+
 .btn-stop {
   -webkit-animation: fadeInn 3s ease-in;
   -moz-animation: fadeInn 3s ease-in;
@@ -416,20 +447,19 @@ video::-webkit-media-controls-panel {
   -moz-transition: background 0.2s ease-in-out;
   -spec-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.7);
   width: auto;
   cursor: pointer;
   /* height: 62px; */
   top: 155px;
   right: 126px;
-  padding: 13px 30px;
+  padding: 1px 30px;
+  height: 38px;
   margin-left: -90px;
-  color: white;
+  color: black;
   border-radius: 999px;
   position: absolute;
   font-size: 20px; }
-  .btn-stop:hover {
-    background: black; }
   @media (max-width: 768px) {
     .btn-stop {
       display: none !important; } }

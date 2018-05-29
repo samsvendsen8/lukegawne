@@ -2136,6 +2136,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/public\/img\/mute.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/img\/mute.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/public\/img\/play-btn.png": {
 		"ft": 32768,
 		"iS": 1477,
@@ -2167,6 +2177,26 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/public\/img\/stop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/img\/stop.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/img\/unmute.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/img\/unmute.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/public\/img\/white-shirt-back.png": {
 		"ft": 32768,

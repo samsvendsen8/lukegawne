@@ -102,6 +102,9 @@
                 <span class="text-large display-block text-black caps">Gawne Mad </span>
             </div>
         </a>
+        <button class="mute-btn" onclick="document.getElementById('video-background').muted=!document.getElementById('video-background').muted">
+            <span></span>
+        </button>
         <span  class="btn-stop text-extra-large display-block text-black">Stop Video</span>
         <a href="#two" class="btn-merch text-extra-large display-block text-black">Merch</a>
     </div>
@@ -189,6 +192,13 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.btn-stop').click(function(){
         $('.my-container').toggleClass('hide');
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $('.mute-btn').click(function(){
+        $('.other-things').toggleClass('unmute');
     });
 });
 </script>
