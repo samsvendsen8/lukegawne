@@ -91,8 +91,9 @@ body:-webkit-full-page-media {
     margin: 0px; }
     @media (max-width: 768px) {
       .social-media ul {
-        justify-content: space-evenly;
-        display: flex !important; } }
+        justify-content: space-around;
+        display: flex !important;
+        padding: 0px 12px !important; } }
     .social-media ul li {
       -webkit-transition: -webkit-transform 0.2s ease-in-out;
       -moz-transition: -moz-transform 0.2s ease-in-out;
@@ -392,7 +393,7 @@ video::-webkit-media-controls-panel {
       background-repeat: no-repeat; }
       @media (max-width: 768px) {
         .card-wrapper .card__img, .card-wrapper .card__img2 {
-          margin-left: 20px; } }
+          margin: 0 auto; } }
     .card-wrapper .card__img {
       background-image: url("../img/black-shirt.png"); }
       .card-wrapper .card__img:hover {
@@ -598,39 +599,38 @@ video::-webkit-media-controls-panel {
   z-index: 999;
   display: inline-block; }
 
-.show .expand span {
-  background: black; }
-
-.show .expand .one {
-  -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -spec-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 6px;
-  position: relative; }
-
-.show .expand .two {
-  opacity: 0; }
-
-.show .expand .three {
-  -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -spec-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -6px;
-  position: relative; }
+.show .expand {
+  position: fixed; }
+  .show .expand span {
+    background: black; }
+  .show .expand .one {
+    -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -spec-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 6px;
+    position: relative; }
+  .show .expand .two {
+    opacity: 0; }
+  .show .expand .three {
+    -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    -spec-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 500ms;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -spec-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -6px;
+    position: relative; }
 
 .show .menu-mobile-overlay {
   -webkit-transition: -webkit-transform 200ms;
@@ -645,7 +645,7 @@ video::-webkit-media-controls-panel {
   -spec-transform: translateX(0px);
   transform: translateX(0px);
   opacity: 1;
-  position: absolute;
+  position: fixed;
   top: 0px;
   display: flex;
   flex-direction: column;
