@@ -694,6 +694,9 @@ video::-webkit-media-controls-panel {
   top: 44px;
   right: 20px;
   z-index: 99999; }
+  @media (min-width: 768px) {
+    .expand {
+      display: none; } }
   .expand span {
     -webkit-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;
     -moz-transition: all, cubic-bezier(0.645, 0.045, 0.355, 1), 300ms;

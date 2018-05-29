@@ -148,6 +148,9 @@
     right: 20px
     z-index: 99999
 
+    @media (min-width: 768px)
+        display: none
+        
     span 
         @include transition(all, $ease-in-out-cubic, 300ms)
         @include transform(rotate(0deg))
