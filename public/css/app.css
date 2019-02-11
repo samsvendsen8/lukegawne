@@ -213,11 +213,11 @@ video::-webkit-media-controls-panel {
   position: relative;
   margin-left: 120px;
   display: flex;
-  bottom: -10px;
+  bottom: 28px;
   z-index: 999; }
   @media (max-width: 768px) {
     .album-widget {
-      bottom: 25px;
+      bottom: 0px;
       margin: 20px;
       left: 0px; } }
   .album-widget__content {
@@ -317,7 +317,8 @@ video::-webkit-media-controls-panel {
   padding: 0px 100px;
   padding-top: 48px;
   justify-content: center;
-  padding-bottom: 100px; }
+  padding-bottom: 0px;
+  flex-wrap: wrap; }
   @media (max-width: 768px) {
     .card-wrapper {
       flex-direction: column;
@@ -331,12 +332,11 @@ video::-webkit-media-controls-panel {
   .card-wrapper .card {
     flex: 1;
     height: 360px;
-    max-width: 300px;
     background: white;
     padding: 30px;
     box-shadow: 0px 0px 57px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
-    margin-right: 120px;
+    margin-right: 40px;
     position: relative;
     z-index: 999; }
     .card-wrapper .card:last-of-type {
@@ -369,7 +369,7 @@ video::-webkit-media-controls-panel {
         transform: scale(1.05);
         box-shadow: 0px 8px 57px rgba(0, 0, 0, 0.4);
         background: #71a0d4; }
-    .card-wrapper .card__img, .card-wrapper .card__img2 {
+    .card-wrapper .card__img {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       -spec-transition: all 0.2s ease-in-out;
@@ -381,19 +381,52 @@ video::-webkit-media-controls-panel {
       position: relative;
       padding: 21px;
       bottom: 0px;
+      background-position: center;
       background-repeat: no-repeat; }
       @media (max-width: 768px) {
-        .card-wrapper .card__img, .card-wrapper .card__img2 {
+        .card-wrapper .card__img {
           margin: 0 auto; } }
-    .card-wrapper .card__img {
+    .card-wrapper .card__img1 {
       background-image: url("../img/black-shirt.png"); }
-      .card-wrapper .card__img:hover {
+      .card-wrapper .card__img1:hover {
         opacity: 1;
         background-image: url("../img/black-shirt-back.png"); }
     .card-wrapper .card__img2 {
       background-image: url("../img/white-shirt.png"); }
       .card-wrapper .card__img2:hover {
         background-image: url("../img/white-shirt-back.png"); }
+    .card-wrapper .card__img3 {
+      background-image: url("../img/sweater-black.jpg"); }
+    .card-wrapper .card__img4 {
+      background-image: url("../img/sweater-white.jpg"); }
+    .card-wrapper .card__img5 {
+      background-image: url("../img/jumper-white.jpg"); }
+    .card-wrapper .card__img6 {
+      background-image: url("../img/jumper-black.jpg"); }
+    .card-wrapper .card__img7 {
+      background-image: url("../img/new-front-jumper-white.jpg"); }
+      .card-wrapper .card__img7:hover {
+        background-image: url("../img/new-back-jumper-white.jpg"); }
+    .card-wrapper .card__img8 {
+      background-image: url("../img/new-front-jumper-black.jpg"); }
+      .card-wrapper .card__img8:hover {
+        background-image: url("../img/new-back-jumper-black.jpg"); }
+    .card-wrapper .card__img9 {
+      background-image: url("../img/new-front-sweater-black.jpg"); }
+      .card-wrapper .card__img9:hover {
+        background-image: url("../img/new-back-sweater-black.jpg"); }
+    .card-wrapper .card__img10 {
+      background-image: url("../img/new-front-sweater-white.jpg"); }
+      .card-wrapper .card__img10:hover {
+        background-image: url("../img/new-back-sweater-white.jpg"); }
+    .card-wrapper .card__img11 {
+      background-image: url("../img/new-shirt-black-front.jpg"); }
+      .card-wrapper .card__img11:hover {
+        background-image: url("../img/new-shirt-black-back.jpg"); }
+    .card-wrapper .card__img12 {
+      background-image: url("../img/new-shirt-white-front.jpg"); }
+      .card-wrapper .card__img12:hover {
+        background-image: url("../img/new-shirt-back-white.jpg"); }
 
 .hide .btn-stop {
   opacity: 0; }
